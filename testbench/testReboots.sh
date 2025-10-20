@@ -1,7 +1,7 @@
 !/bin/bash
 
 # Archivo donde se guardsan los comados
-COMMANDS_FILE="/usr/local/bin/command_list.txt"
+COMMANDS_FILE="/home/user1/script/testbench/commands.txt"
 
 # donde guardamos los estados 
 STATE_FILE="/var/tmp/command_index"
