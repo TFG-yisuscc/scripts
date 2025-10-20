@@ -1,0 +1,5 @@
+python monitorsystem.py ollama mistral:7b -f 0.5
+python monitorsystem.py ollama deepseek-r1:1.5b -f 0.5
+python monitorsystem.py ollama cas/salamandra-7b-instruct:latest  -f 0.5
+python monitorsystem.py ollama qwen2.5:0.5b  -f 0.5
+
