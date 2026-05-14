@@ -32,8 +32,8 @@ echo -e "${BOLD}${CYAN}╔══════════════════
 echo -e "${BOLD}${CYAN}║      HuggingFace Model Downloader        ║${NC}"
 echo -e "${BOLD}${CYAN}╚══════════════════════════════════════════╝${NC}\n"
 
-if ! command -v huggingface-cli &>/dev/null; then
-    echo -e "${RED}✗ huggingface-cli no encontrado.${NC}"
+if ! command -v hf &>/dev/null; then
+    echo -e "${RED}✗ hf no encontrado.${NC}"
     echo -e "  Instala con: ${YELLOW}pip install huggingface_hub${NC}"
     exit 1
 fi
@@ -65,7 +65,7 @@ for i in "${!MODELS[@]}"; do
     echo -e "        → ${OUT_DIR}"
 
     # Construir comando
-    CMD="huggingface-cli download $MODEL --local-dir $OUT_DIR"
+    CMD="hf download $MODEL --local-dir $OUT_DIR"
     [ -n "$HF_TOKEN" ] && CMD="$CMD --token $HF_TOKEN"
 
     if $CMD; then
